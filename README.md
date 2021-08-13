@@ -1,7 +1,12 @@
 # Deployment 
 
+## Environment
 OS: Linux Ubuntu 18
+Node JS version 14
 
+## Nginx and Vue setip
+
+Ref: (http://delia13.me/2020/03/16/vue-ubuntu/)[http://delia13.me/2020/03/16/vue-ubuntu/]
 
 ## If you are facing a problem and need to cleanup the npm, use below command.
 

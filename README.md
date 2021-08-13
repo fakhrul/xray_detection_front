@@ -1,8 +1,9 @@
 # Deployment 
 
 ## Environment
-OS: Linux Ubuntu 18
-Node JS version 14
+= OS: Linux Ubuntu 18
+- Node JS version 14, ref [https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
+)
 
 ## Nginx and Vue setip
 

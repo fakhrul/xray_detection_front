@@ -55,16 +55,6 @@
         <pre>{{ uploadError }}</pre>
       </div>
 
-      <div>
-        <p>
-          If you don't have a sample file, you can download from below link:
-        <ul>
-          <li><a href="http://localhost:5000/sample/xray1.png" target="_blank">Xray Image 1</a></li>
-          <li><a href="http://localhost:5000/sample/xray2.png" target="_blank" >Xray Image 2</a></li>
-          <li><a href="http://localhost:5000/sample/xray3.png" target="_blank" >Xray Image 3</a></li>
-        </ul>
-        </p>
-      </div>
     </CCol>
   </CRow>
 </template>

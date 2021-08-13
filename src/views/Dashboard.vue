@@ -43,9 +43,20 @@
         <!-- <MainChartExample style="height:300px;margin-top:40px;"/> -->
       </CCardBody>
       <CCardFooter>
-        <CButton type="submit" size="sm" color="primary" @click="submitFile"
+              <div>
+        <p>
+          If you don't have a sample file, you can download from below link:
+        <ul>
+          <li><a href="http://178.128.105.21:5000/sample/xray1.png" target="_blank">Xray Image 1</a></li>
+          <li><a href="http://178.128.105.21:5000/sample/xray2.png" target="_blank" >Xray Image 2</a></li>
+          <li><a href="http://178.128.105.21:5000/sample/xray3.png" target="_blank" >Xray Image 3</a></li>
+        </ul>
+        </p>
+      </div>
+
+        <!-- <CButton type="submit" size="sm" color="primary" @click="submitFile"
           ><CIcon name="cil-check-circle" /> Submit</CButton
-        >
+        > -->
 
         <!-- <CRow class="text-center">
           <CCol md sm="12" class="mb-sm-2 mb-0">

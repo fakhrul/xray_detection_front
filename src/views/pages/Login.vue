@@ -7,8 +7,7 @@
             <CCard class="p-6">
               <CCardBody>
                 <CForm>
-                  <h1>A.I. Teleradiology</h1>
-                  <p class="text-muted">By Imagine MAIA</p>
+                  <h1>Teleradiology</h1>
                   <CInput
                     placeholder="Username"
                     autocomplete="username email"
@@ -78,8 +77,8 @@ export default {
       obj: {
         // email: "admin@test.com",
         // password: "password",
-        email: "admin@xray.com",
-        password: "qwe123",
+        email: "",
+        password: "",
         authenticated: true,
       },
     };

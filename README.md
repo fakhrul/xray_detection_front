@@ -5,6 +5,10 @@
 - Node JS version 14, ref [https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
 )
 
+## Server Access
+````
+vDk1811vDk1811vdk
+````
 ## Nginx and Vue setip
 
 Ref: (http://delia13.me/2020/03/16/vue-ubuntu/)[http://delia13.me/2020/03/16/vue-ubuntu/]

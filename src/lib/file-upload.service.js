@@ -1,6 +1,6 @@
 import * as axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'http://178.128.105.21:5000';
 
 function upload(formData) {
     console.log('asd')

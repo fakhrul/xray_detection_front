@@ -1,0 +1,118 @@
+<template>
+  <div class="c-app flex-row align-items-center">
+    <CContainer>
+      <CRow class="justify-content-center">
+        <CCol md="4">
+          <CCardGroup>
+            <CCard class="p-6">
+              <CCardBody>
+                <CForm>
+                  <h1>A.I. Teleradiology</h1>
+                  <p class="text-muted">By Imagine MAIA</p>
+                  <CInput
+                    placeholder="Username"
+                    autocomplete="username email"
+                    v-model="obj.email"
+                  >
+                    <template #prepend-content
+                      ><CIcon name="cil-user"
+                    /></template>
+                  </CInput>
+                  <CInput
+                    placeholder="Password"
+                    type="password"
+                    autocomplete="curent-password"
+                    v-model="obj.password"
+                  >
+                    <template #prepend-content
+                      ><CIcon name="cil-lock-locked"
+                    /></template>
+                  </CInput>
+                  <CRow>
+                    <CCol col="6" class="text-left">
+                      <CButton
+                        color="primary"
+                        class="px-4"
+                        @click.prevent="login"
+                        >Login</CButton
+                      >
+                    </CCol>
+                    <CCol col="6" class="text-right">
+                      <!-- <CButton color="link" class="px-0">Forgot password?</CButton>
+                      <CButton color="link" class="d-lg-none">Register now!</CButton> -->
+                    </CCol>
+                  </CRow>
+                </CForm>
+              </CCardBody>
+            </CCard>
+            <!-- <CCard
+              color="primary"
+              text-color="white"
+              class="text-center py-5 d-md-down-none"
+              body-wrapper
+            >
+              <CCardBody>
+                <h2>Sign up</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <CButton
+                  color="light"
+                  variant="outline"
+                  size="lg"
+                >
+                  Register Now!
+                </CButton>
+              </CCardBody>
+            </CCard> -->
+          </CCardGroup>
+        </CCol>
+      </CRow>
+    </CContainer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Login",
+  data: () => {
+    return {
+      obj: {
+        // email: "admin@test.com",
+        // password: "password",
+        email: "admin@xray.com",
+        password: "qwe123",
+        authenticated: true,
+      },
+    };
+  },
+  mounted() {
+    var self = this;
+    self.authenticated = auth.check();
+    if (self.authenticated) {
+      self.$router.push({ path: "/dashboard" });
+
+      // self.$router.push({ path: "/dashboard" });
+    }
+  },
+  methods: {
+    login() {
+      var self = this;
+      let data = {
+        email: self.obj.email,
+        password: self.obj.password,
+      };
+      var authResult = auth.doLogin(data);
+      if(authResult){
+        auth.recordLogin(authResult.token, authResult.user);
+        self.$router.push({ path: "/dashboard" });
+
+      }
+
+      // auth.doLogin(data).then((response) => {
+      //   auth.recordLogin(response.result.token, response.result);
+      //   self.$router.push({ path: "/dashboard" });
+      //   // self.$router.push({ path: "/" });
+      // });
+    },
+  },
+};
+</script>

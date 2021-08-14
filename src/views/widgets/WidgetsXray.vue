@@ -136,7 +136,7 @@
           <CCardBody>
             <CRow>
               <CCol>
-                <CImg :src="treatmentImage" />
+                <CImg fluid :src="treatmentImage" />
               </CCol>
             </CRow>
           </CCardBody>

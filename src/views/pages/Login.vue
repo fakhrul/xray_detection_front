@@ -5,9 +5,13 @@
         <CCol md="4">
           <CCardGroup>
             <CCard class="p-6">
-              <CCardBody>
-                <CForm>
-                  <h1>Teleradiology</h1>
+              <CCardBody  class="rounded float-start ">
+                <CForm class="mb-2 text-center" >
+                  <!-- <div class="c-avatar">
+                    <img src="img/logo.png" />
+                  </div> -->
+                  <!-- <h1>Teleradiology</h1> -->
+                  <CImg src="img/logo.png"  class="mb-2" ></CImg>
                   <CInput
                     placeholder="Username"
                     autocomplete="username email"
@@ -28,7 +32,7 @@
                     /></template>
                   </CInput>
                   <CRow>
-                    <CCol col="6" class="text-left">
+                    <CCol class="text-center">
                       <CButton
                         color="primary"
                         class="px-4"
@@ -36,10 +40,7 @@
                         >Login</CButton
                       >
                     </CCol>
-                    <CCol col="6" class="text-right">
-                      <!-- <CButton color="link" class="px-0">Forgot password?</CButton>
-                      <CButton color="link" class="d-lg-none">Register now!</CButton> -->
-                    </CCol>
+               
                   </CRow>
                 </CForm>
               </CCardBody>
@@ -100,10 +101,9 @@ export default {
         password: self.obj.password,
       };
       var authResult = auth.doLogin(data);
-      if(authResult){
+      if (authResult) {
         auth.recordLogin(authResult.token, authResult.user);
         self.$router.push({ path: "/dashboard" });
-
       }
 
       // auth.doLogin(data).then((response) => {
@@ -115,3 +115,16 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.card-body {
+  background: rgb(46, 47, 61);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(125, 165, 193);
+    border-color: rgb(71, 92, 108);
+}
+
+</style>
